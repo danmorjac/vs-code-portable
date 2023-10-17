@@ -11,13 +11,11 @@ Este tutorial te mostrará cómo crear una instalación portátil de Visual Stud
 
 Crea la siguiente estructura de directorios en la ubicación donde deseas almacenar la instalación portátil de VSCode:
 
-vscode-portable/
-data/
-vscode-win/
-(archivos de VSCode para Windows)
-vscode-linux/
-(archivos de VSCode para Linux)
-vscode-portable.sh (script de inicio)
+vscode-portable/  
+data/  
+vscode-win/(archivos de VSCode para Windows)  
+vscode-linux/(archivos de VSCode para Linux)  
+vscode-portable.sh (script de inicio)  
 
 
 Asegúrate de que todas las carpetas estén en el mismo directorio raíz (`vscode-portable`).
@@ -26,10 +24,7 @@ Asegúrate de que todas las carpetas estén en el mismo directorio raíz (`vscod
 
 Crea un script de inicio llamado `vscode-portable.sh` en la carpeta `vscode-portable` y agrega el siguiente contenido:
 
-```bash
-=======
 ```markdown
-
 #!/bin/bash
 VSCODE_CWD="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OS_NAME=$(uname -s)
@@ -44,7 +39,6 @@ else
   echo "El sistema operativo $OS_NAME no es compatible."
   exit 1
 fi
-
 ```
 
 ## Paso 4: Permisos de Ejecución
