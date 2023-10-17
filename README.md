@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # vs-code-portable
 
 # Visual Studio Code Portátil para Windows y Linux
@@ -7,8 +8,9 @@ Este repositorio contiene instrucciones y archivos necesarios para crear y utili
 
 ## Paso 1: Descargar Visual Studio Code
 
-Visita el [sitio web oficial de descarga de VSCode](https://code.visualstudio.com/) y descarga la versión de Windows (en formato `.zip`) y la versión de Linux (en formato `.tar.gz`).
+Visita el [sitio web oficial de descarga de VSCode](https://code.visualstudio.com/) y descarga la versión de Windows (en formato `.zip`) y la versión de Linux (en formato `.tar.gz`)
 =======
+
 # 1.Visual Studio Code Portátil para Windows y Linux `vscode-portable.sh`
 
 Este tutorial te mostrará cómo crear una instalación portátil de Visual Studio Code (VSCode) que funcione tanto en sistemas Windows como en sistemas Linux. Esto te permitirá llevar tu entorno de desarrollo contigo en una unidad USB o cualquier otro medio de almacenamiento portátil.
@@ -17,6 +19,7 @@ Este tutorial te mostrará cómo crear una instalación portátil de Visual Stud
 
 1. Visita el [sitio web oficial de descarga de VSCode](https://code.visualstudio.com/).
 2. Descarga la versión de Windows en formato `.zip` y la versión de Linux en formato `.tar.gz`.
+
 >>>>>>> 72b4d0cdef49084a4417f5de9dfaa31ca7b84b37
 
 ## Paso 2: Estructura de Directorios
@@ -40,6 +43,7 @@ Asegúrate de que todas las carpetas estén en el mismo directorio raíz (`vscod
 Crea un script de inicio llamado `vscode-portable.sh` en la carpeta `vscode-portable` y agrega el siguiente contenido:
 
 <<<<<<< HEAD
+
 ```bash
 =======
 ```markdown
@@ -72,9 +76,11 @@ Asegúrate de que el script vscode-portable.sh tenga permisos de ejecución en L
 
 chmod +x vscode-portable.sh
 =======
+
 ```
 chmod +x vscode-portable.sh
 ```
+
 >>>>>>> 72b4d0cdef49084a4417f5de9dfaa31ca7b84b37
 
 ## Paso 5: Copiar Archivos
@@ -82,17 +88,16 @@ chmod +x vscode-portable.sh
 Copia los archivos de VSCode para Windows en la carpeta vscode-win y los archivos de VSCode para Linux en la carpeta vscode-linux. Asegúrate de que los nombres de los archivos sean correctos según el sistema operativo.
 
 <<<<<<< HEAD
-##Paso 6: Ejecutar VSCode Portátil
+## Paso 6: Ejecutar VSCode Portátil
 Para usar VSCode portátil, simplemente ejecuta el script vscode-portable.sh en el directorio vscode-portable. Este script detectará automáticamente el sistema operativo y ejecutará la versión correspondiente de VSCode desde vscode-win/ o vscode-linux/, utilizando la carpeta data/ para las configuraciones portátiles.
-
-
 
 ./vscode-portable.sh
 
 Con estos pasos, has creado una instalación portátil de Visual Studio Code que funciona tanto en Windows como en Linux. Esto te permite llevar tu entorno de desarrollo personalizado en una unidad USB o en cualquier otro medio de almacenamiento y utilizarlo en diferentes computadoras sin necesidad de instalación.
 
-¡Ahora estás listo para programar en cualquier lugar y en cualquier sistema operativo!
+¡Ahora estás listo para programar en cualquier lugar y en cualquier sistema operativo
 =======
+
 ## Paso 6: Ejecutar VSCode Portátil
 
 Para usar VSCode portátil, simplemente ejecuta el script vscode-portable.sh en el directorio vscode-portable. Este script detectará automáticamente el sistema operativo y ejecutará la versión correspondiente de VSCode desde vscode-win/ o vscode-linux/, utilizando la carpeta data/ para las configuraciones portátiles.
@@ -109,12 +114,12 @@ En esta versión mejorada del script de Bash para ejecutar Visual Studio Code, s
 
 ## Líneas del Script
 
-
 ## Obtener el Directorio del Script
 
 ```
 DIR=$(dirname "$0")
 ```
+
 Esta línea obtiene el directorio en el que se encuentra el script y almacena la ubicación en la variable DIR.
 
 ## Definir la Ubicación de los Datos de Visual Studio Code
@@ -122,6 +127,7 @@ Esta línea obtiene el directorio en el que se encuentra el script y almacena la
 ```
 DATA="$DIR/vscode-win/data"
 ```
+
 Esta línea define la ubicación de los datos de usuario de Visual Studio Code. Los datos se asumen que se encuentran en la subcarpeta vscode-win/data dentro del directorio del script.
 
 # Determinar la Ubicación del Ejecutable de Visual Studio Code
@@ -137,6 +143,7 @@ En esta línea, se busca el comando code en el sistema utilizando el comando whi
 ```
 "$CODE" --user-data-dir="$DATA" --extensions-dir "$DATA/extensions" "$@"
 ```
+
 Finalmente, esta línea ejecuta Visual Studio Code con los siguientes argumentos:
 
 - ``CODE``: La ubicación del ejecutable de Visual Studio Code.
