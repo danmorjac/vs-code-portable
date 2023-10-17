@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-# vs-code-portable
-
-# Visual Studio Code Portátil para Windows y Linux
-
-Este repositorio contiene instrucciones y archivos necesarios para crear y utilizar una instalación portátil de Visual Studio Code (VSCode) que funcione tanto en sistemas Windows como en sistemas Linux.
-
-## Paso 1: Descargar Visual Studio Code
-
-Visita el [sitio web oficial de descarga de VSCode](https://code.visualstudio.com/) y descarga la versión de Windows (en formato `.zip`) y la versión de Linux (en formato `.tar.gz`)
-=======
-
 # 1.Visual Studio Code Portátil para Windows y Linux `vscode-portable.sh`
 
 Este tutorial te mostrará cómo crear una instalación portátil de Visual Studio Code (VSCode) que funcione tanto en sistemas Windows como en sistemas Linux. Esto te permitirá llevar tu entorno de desarrollo contigo en una unidad USB o cualquier otro medio de almacenamiento portátil.
@@ -19,8 +6,6 @@ Este tutorial te mostrará cómo crear una instalación portátil de Visual Stud
 
 1. Visita el [sitio web oficial de descarga de VSCode](https://code.visualstudio.com/).
 2. Descarga la versión de Windows en formato `.zip` y la versión de Linux en formato `.tar.gz`.
-
->>>>>>> 72b4d0cdef49084a4417f5de9dfaa31ca7b84b37
 
 ## Paso 2: Estructura de Directorios
 
@@ -33,8 +18,7 @@ vscode-win/
 vscode-linux/
 (archivos de VSCode para Linux)
 vscode-portable.sh (script de inicio)
-bash
-Copy code
+
 
 Asegúrate de que todas las carpetas estén en el mismo directorio raíz (`vscode-portable`).
 
@@ -42,12 +26,10 @@ Asegúrate de que todas las carpetas estén en el mismo directorio raíz (`vscod
 
 Crea un script de inicio llamado `vscode-portable.sh` en la carpeta `vscode-portable` y agrega el siguiente contenido:
 
-<<<<<<< HEAD
-
 ```bash
 =======
 ```markdown
->>>>>>> 72b4d0cdef49084a4417f5de9dfaa31ca7b84b37
+
 #!/bin/bash
 VSCODE_CWD="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OS_NAME=$(uname -s)
@@ -62,41 +44,20 @@ else
   echo "El sistema operativo $OS_NAME no es compatible."
   exit 1
 fi
-<<<<<<< HEAD
-=======
-```
 
->>>>>>> 72b4d0cdef49084a4417f5de9dfaa31ca7b84b37
+```
 
 ## Paso 4: Permisos de Ejecución
 
 Asegúrate de que el script vscode-portable.sh tenga permisos de ejecución en Linux con el siguiente comando:
 
-<<<<<<< HEAD
-
-chmod +x vscode-portable.sh
-=======
-
 ```
 chmod +x vscode-portable.sh
 ```
-
->>>>>>> 72b4d0cdef49084a4417f5de9dfaa31ca7b84b37
 
 ## Paso 5: Copiar Archivos
 
 Copia los archivos de VSCode para Windows en la carpeta vscode-win y los archivos de VSCode para Linux en la carpeta vscode-linux. Asegúrate de que los nombres de los archivos sean correctos según el sistema operativo.
-
-<<<<<<< HEAD
-## Paso 6: Ejecutar VSCode Portátil
-Para usar VSCode portátil, simplemente ejecuta el script vscode-portable.sh en el directorio vscode-portable. Este script detectará automáticamente el sistema operativo y ejecutará la versión correspondiente de VSCode desde vscode-win/ o vscode-linux/, utilizando la carpeta data/ para las configuraciones portátiles.
-
-./vscode-portable.sh
-
-Con estos pasos, has creado una instalación portátil de Visual Studio Code que funciona tanto en Windows como en Linux. Esto te permite llevar tu entorno de desarrollo personalizado en una unidad USB o en cualquier otro medio de almacenamiento y utilizarlo en diferentes computadoras sin necesidad de instalación.
-
-¡Ahora estás listo para programar en cualquier lugar y en cualquier sistema operativo
-=======
 
 ## Paso 6: Ejecutar VSCode Portátil
 
@@ -152,4 +113,3 @@ Finalmente, esta línea ejecuta Visual Studio Code con los siguientes argumentos
 - ``$@``: Reenvía cualquier argumento adicional proporcionado al script.
 
 Este script permite la ejecución de Visual Studio Code con personalización de rutas, lo que puede ser útil para mantener múltiples instancias de Visual Studio Code con diferentes configuraciones y extensiones.
->>>>>>> 72b4d0cdef49084a4417f5de9dfaa31ca7b84b37
