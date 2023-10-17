@@ -73,12 +73,6 @@ En esta versión mejorada del script de Bash para ejecutar Visual Studio Code, s
 
 ## Líneas del Script
 
-### Shebang
-```bash
-#!/bin/bash
-```
-
-Esta línea indica que el script debe ser interpretado por el shell Bash.
 
 ## Obtener el Directorio del Script
 
